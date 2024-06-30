@@ -55,7 +55,6 @@ The Flask application provides the following API endpoints:
 
 - **GET /**: Render the home page.
 - **POST /predict**: Predict the water quality based on user input.
-- **GET /chatbot**: Interact with the chatbot for predictions and information.
 
 ## Chatbot Integration
 
@@ -85,10 +84,6 @@ We welcome contributions to this project. To contribute:
     git push origin feature/your-feature-name
     ```
 5. **Open a pull request**.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
