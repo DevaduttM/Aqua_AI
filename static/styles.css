@@ -404,6 +404,7 @@ opacity: 0.9;
     .datainput input{
         width: 250px;
         height: 30px;
+        font-size: 12px;
     }
 
     .datainput label{
@@ -454,5 +455,16 @@ opacity: 0.9;
 
     .inner-container{
         margin-top: 30px;
+        width: 100px;
+    }
+
+    #progressvalue{
+        font-size: 14px;
+    }
+
+}
+@media (max-width = 430px) {
+    .inner-container{
+        width: 150px;
     }
 }
