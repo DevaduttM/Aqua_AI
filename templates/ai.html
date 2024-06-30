@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaAI Model</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/x-icon" href="../static/aqua-ai-logo-intertwining-the-fluidity-of-water-with-the-sharp-edge-of-technology-features-a-styli.ico">
+</head>
+<body>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "86d59666-2e5b-49a3-ba25-6715ddfcf571", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "3829a60b-415e-4ea0-8eeb-d2fdbf4bfcf5", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+    <section id="ai">
+        <div class="form-container">
+            <form action="/predict" method="post">
+                <div class="inner-container">
+                    <div class="datainput">
+                        <label for = "ph-value">pH Value</label>
+                        <input type="number" step = 0.01 id="ph-value" name="ph-value" min="1" max="14" required>
+                    </div>
+                    <div class="datainput">
+                        <label for = "ph-value">Temperature (°C)</label>
+                        <input type="number" step = 0.01 id="temp" name="temp" required>
+                    </div>
+                    <div class="datainput">
+                        <label for = "ph-value">Turbidity (NTU)</label>
+                        <input type="number" step = 0.01 id="turbidity" name="turbidity" required>
+                    </div>
+                    <div class="datainput">
+                        <label for = "ph-value">Dissolved Oxygen (mg/L)</label>
+                        <input type="number" step = 0.01 id="do" name="do" required>
+                    </div>
+                    <div class="datainput">
+                        <label for = "ph-value">Conductivity (μS/cm)</label>
+                        <input type="number" step = 0.01 id="conductivity" name="conductivity" required>
+                    </div>
+                    <div class="datainput">
+                        <label for = "ph-value">Hardness</label>
+                        <input type="number" step = 0.01 id="hard" name="hard" required>
+                    </div>
+                    <div class="datainput" id = "submitbtn">
+                        <input type="submit" value="Submit" id = "submitButton">
+                    </div>
+                </div>
+            </form>
+            <div class="result" >
+
+                <h4>
+                    {{pred}}<br>
+                    
+                </h4>
+
+
+                <h1 id = "responseContainer">
+
+                </h1>
+                <div class="conf">
+                    <div class="progress" id = "graph">
+                        <span id = "progressvalue">{{cval1}}</span>
+                        </div>
+                    <h3>{{confidence1}}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../static/script.js"></script>
+    <script type="text/javascript">
+        const c = '{{ cval }}';
+        b= parseFloat(c);
+        document.getElementById("graph").style.background = `conic-gradient(rgb(19, 19, 109) ${b}%, rgb(240, 230, 230) ${b}%)`;
+        console.log(b);
+    </script>
+</body>
+</html>

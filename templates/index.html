@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua AI</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/x-icon" href="../static/aqua-ai-logo-intertwining-the-fluidity-of-water-with-the-sharp-edge-of-technology-features-a-styli.ico">
+</head>
+<body>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "86d59666-2e5b-49a3-ba25-6715ddfcf571", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "3829a60b-415e-4ea0-8eeb-d2fdbf4bfcf5", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a id = "navli1" href="#home">Home</a></li>
+                <li><a id = "navli2" href="#about">About</a></li>
+                <li><a id = "navli3" href="/ai" target="_blank">Model</a></li>
+            </ul>
+            <svg id = "ham" stroke="#fff" fill="#fff" stroke-width="0" viewBox="0 0 512 512" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg>
+        </nav>
+    </header>
+
+    <section class="hero" id = "home">
+        <div class="content">
+            <h1 id = "wel">Welcome to <span class="highlight">Aqua AI</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <a class = "button" href="/ai" target="_blank">Get Started</a>
+            <div class="next-page-icon">
+            <a href = "#about"><img src ="../static/Group 2.png"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id = "about">
+        <div class="abt">
+            <h2>About Aqua AI</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+
+
+
+    <script src = "../static/script.js"></script>
+</body>
+</html>

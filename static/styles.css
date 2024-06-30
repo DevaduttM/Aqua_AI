@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    overflow-x: hidden;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar svg{
+    margin-right: 10px;
+    display: none;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    transition: 0.5s ease-in-out;
+}
+
+.menu a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-family: "Iceland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.menu.active{
+    color: rgb(0, 255, 255);
+}
+
+
+.menu a:hover{
+    color: rgb(0, 255, 255);
+}
+
+.datainput {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    height: fit-content;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#ai {
+    height: 100vh;
+    background-image: url("./BgImg.jpg");
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.datainput input {
+    width: 300px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-style: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    color: #fff;
+    transition: 0.5s ease-in;
+}
+
+.datainput input:focus {
+    outline: 2px solid rgba(207, 207, 207, 0.767);
+}
+
+.datainput label{
+    margin-left: 12px;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#submitbtn input{
+    width: 150px;
+    height: 45px;
+    background-image: linear-gradient(to right, rgba(0, 255, 255, 1), rgba(4, 150, 150, 1));
+    color: #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#submitbtn input:hover{
+    background-color: #fff;
+}
+
+
+.result{
+    width: 80%;
+    background-color: rgb(240, 230, 230);
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 20px;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-direction: row;
+    align-items:center;
+    border-style: ridge;
+}
+
+.result h4, h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.progress{
+    width: 200px;
+    height: 200px;
+    display: grid;
+    border-radius: 50%;
+
+    place-items: center;
+}
+
+#progressvalue{
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    border-radius: 50%;
+    background-color: rgb(240, 230, 230);
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.conf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+
+
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;  
+    height: 100vh; 
+    background-color: #18161A;
+
+}
+
+.content {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 94%;  
+    height: 85%; 
+    background-image: url("./BgImg.jpg");
+    border-radius: 15px;
+    background-size: cover;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+.content h1 {
+padding-top: 12vh;
+font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5.5rem;
+margin-bottom: 10px;
+opacity: 0.9;
+}
+
+.content .highlight {
+    background: linear-gradient(135deg, #2F59AC, #A9D7F0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    opacity: 1;
+}
+
+.content p {
+    font-family: 'roboto', sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    max-width: 60%;
+    opacity: 0.8;
+
+}
+
+.button{
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #3A29A3, #C27E7E);
+    font-weight:400;
+    color: #fff;
+    width: 13vw;
+    height: 5vh;
+    transition: background-image 0.6s ease-in-out;
+    border-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+}
+
+.button:hover{
+    background-image: linear-gradient(135deg,#C27E7E,#3A29A3);
+}
+
+.next-page-icon{
+    bottom: 30px;
+    justify-content: baseline;
+    align-content: baseline;
+    transition: transform 0.3s ease-in-out;
+    margin-top: auto;
+}
+
+.next-page-icon:hover{
+    transform: scale(1.2);
+}
+
+
+#about{
+    height: 100vh;
+    background-image: url("./BgImg.jpg");
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 60vh;
+    background-color: rgb(74, 71, 78,47%);
+    background: rgba(74, 71, 78, 0.47);
+    background-blend-mode: color-burn;
+    mix-blend-mode: luminosity;
+    border: 1px solid #7ACFFF;
+    border-radius: 42px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    text-wrap: wrap;
+}
+
+.abt p{
+    font-family: 'Iceland';
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 2vw;
+    text-align: justify;
+}
+
+.abt h2{
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 3vw;
+}
+
+
+
+@media (max-width: 1110px) {
+
+    .datainput input{
+        width: 200px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .form-container{
+        width: 90%;
+    }
+
+    .inner-container{
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 475px){
+    body{
+        height: 100vh;
+    }
+
+    .hero{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+
+    #ai{
+        height: 100%;
+    }
+
+    .form-container{
+        height: fit-content;
+    }
+
+    .abt p{
+        font-size: 20px;
+    }
+
+    .abt{
+        height: 90vh;
+        width: 90vw;
+    }
+
+    .abt h2{
+        font-size: 40px;
+    }
+
+    .navbar svg{
+        display: flex;
+        top: 10px;
+        right: 10px;
+        position: fixed;
+    }
+
+    .content h1{
+        font-size: 3rem;
+    }
+
+    .content p{
+        max-width: 80vw;
+    }
+
+    .next-page-icon{
+        bottom: 30px;
+    }
+
+    .button{
+        width: 200px;
+        margin-top: 30px;
+    }
+
+    .datainput input{
+        width: 250px;
+        height: 30px;
+    }
+
+    .datainput label{
+        font-size: 0.6rem;
+    }
+
+    #submitbtn input{
+        width: 100px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .result{
+        margin-bottom: 50px;
+        flex-direction: column;
+        height: 100%;
+        gap: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .progress{
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+    }
+
+    
+    .navbar{
+        z-index: 10;
+    }
+
+    .menu{
+        display: none;
+        transition: 0.5s ease;
+    }
+
+    .menu.active{
+        display: flex;
+        flex-direction: column;
+        background-color: #18161A;
+        width: 70%;
+        height: 300px;
+        padding-left: 0;
+        margin-top: 60px;
+        border-radius: 20px;
+    }
+
+    .inner-container{
+        margin-top: 30px;
+    }
+}
