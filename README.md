@@ -42,12 +42,11 @@ The model training is done using the `AquaAI.py` script. This script reads the d
 
 **Steps to train the model**:
 
-1. Ensure you have the dataset in the `data/` directory.
-2. Run the `AquaAI.py` script:
+1. Run the `AquaAI.py` script:
     ```bash
     python AquaAI.py
     ```
-3. The trained model will be saved as a `.pkl` file in the root directory.
+2. The trained model will be saved as a `.pkl` file in the root directory.
 
 ## API Endpoints
 
