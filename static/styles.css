@@ -293,7 +293,7 @@ opacity: 0.9;
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 60vh;
+    height: 75vh;
     background-color: rgb(74, 71, 78,47%);
     background: rgba(74, 71, 78, 0.47);
     background-blend-mode: color-burn;
@@ -307,11 +307,11 @@ opacity: 0.9;
 }
 
 .abt p{
-    font-family: 'Iceland';
+    font-family: 'Poppins';
     font-style: normal;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 2vw;
+    font-size: 1.3vw;
     text-align: justify;
 }
 
@@ -338,6 +338,10 @@ opacity: 0.9;
     .inner-container{
         gap: 1rem;
     }
+
+    .abt p{
+        font-size: 15px;
+    }
 }
 
 
@@ -361,7 +365,7 @@ opacity: 0.9;
     }
 
     .abt p{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .abt{
