@@ -321,6 +321,10 @@ opacity: 0.9;
     font-size: 3vw;
 }
 
+.navbar{
+    z-index: 10;
+}
+
 
 
 @media (max-width: 1110px) {
